@@ -1,0 +1,232 @@
+* {
+	margin: 0;
+	padding: 0;
+	/*box-sizing: border-box;*/
+}
+@font-face {
+	font-family: "roboto";
+	src: url(../fonts/Roboto-Light.ttf), url(../fonts/Roboto-Regular.ttf),
+		url(../fonts/Roboto-Medium.ttf);
+	font-style: normal;
+	font-weight: 100;
+}
+
+body {
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: white;
+	font-family: roboto;
+}
+
+header {
+	width: 100%;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	list-style: none;
+	background: white;
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	height: 10vh;
+}
+
+#primeira,
+#segunda,
+#terceira {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: black;
+}
+
+.banner {
+  width: 100%;
+}
+
+.section {
+  width: 100%;
+  margin: 0 auto;
+  padding: 3em 0;
+}
+
+.container {
+	/*position: relative;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+  /*background-color: #FBEAFF;*/
+}
+
+.container .card {
+	text-align: justify;
+	/*position: relative;*/
+	margin: 10px;
+	padding: 15px;
+	display: flex;
+  /*background-color: #F3C5FF;*/
+}
+
+.container .card .imgBox {
+	margin-right: 70px;
+	margin-top: auto;
+	margin-bottom: auto;
+	max-width: 353px;
+	flex: 0 0 353px;
+}
+
+.container .card .imgBox img {
+	max-width: 100%;
+}
+
+.container .card .content {
+	margin-left: 70px;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-right: 80px;
+  /*background-color: #3588A3;*/
+}
+
+.container .card .content p {
+	display: inline;
+	font-size: 20px;
+	text-align: justify;
+	line-height: 1.6;
+	color: #292929;
+}
+
+.container .card .content h2 {
+	font-size: 60px;
+	font-weight: lighter;
+	color: #ffbd00;
+}
+
+.container .card .formulario {
+	margin-right: 70px;
+	margin-top: auto;
+	margin-bottom: auto;
+	max-width: 353px;
+	flex: 0 0 353px;
+}
+
+.formulario {
+	max-width: 353px;
+	margin: 0 auto;
+	background: transparent;
+	padding: 30px;
+	flex-direction: column;
+}
+
+.dados {
+	display: flex;
+	flex-direction: column;
+	margin-right: 4%;
+	width: 100%;
+	height: 50px;
+}
+
+.dados,
+.msg {
+	width: 100%;
+}
+
+.dados .input,
+.msg textarea {
+	margin: 10px 0;
+	height: 300px;
+	background-color: transparent;
+  outline: none;
+	border: 0;
+	border-bottom: 2px solid #ffbd32;
+	padding: 5px;
+	color: #292929;
+	width: 100%;
+}
+
+::-webkit-input-placeholder {
+	color: #707070;
+}
+
+::-moz-input-placeholder {
+	color: #707070;
+}
+
+::-ms-input-placeholder {
+	color: #707070;
+}
+
+.botao {
+	width: 100%;
+	background-color: #ffbd00;
+	text-align: center;
+	padding: 15px;
+  border: none;
+	border-radius: 25px;
+	color: #000000;
+	cursor: pointer;
+	text-transform: uppercase;
+  outline: none;
+}
+
+nav a {
+	color: black;
+	font-size: 18px;
+	text-decoration: none;
+	position: relative;
+}
+nav a::after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	border-bottom: 2px solid #ffbd00;
+	top: 0;
+	left: 0;
+	transform: translateX(-100%);
+	transition: transform 0.5s ease;
+}
+nav li {
+	overflow: hidden;
+	height: 25px;
+}
+
+a.active::after {
+	transform: translateX(0%);
+}
+
+
+@media screen and (max-width: 480px) {
+	.section, .container, .card {
+		flex-direction: column;
+		max-width: 350px;
+	}
+
+	.container .card .imgBox {
+		max-width: 100%;
+	}
+
+	.container .card .content {
+		margin-right: 0;
+	}
+
+  .formulario {
+    width: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .botao {
+    width: 100%;
+  }
+  .input-padrao {
+    width: 85%;
+    
+  }
+}
+
